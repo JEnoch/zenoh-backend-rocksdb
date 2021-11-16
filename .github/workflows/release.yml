@@ -63,7 +63,7 @@ jobs:
           echo "GIT_TAG=${GIT_TAG}"
           echo ::set-output name=GIT_TAG::"${GIT_TAG}"
 
-          ZENOH_VERSION=$(sed -n 's/^version = "\(.*\)"/\1/p' zenoh/Cargo.toml | head -n1)
+          ZENOH_VERSION=$(sed -n 's/^version = "\(.*\)"/\1/p' Cargo.toml | head -n1)
           echo "ZENOH_VERSION=${ZENOH_VERSION}"
           echo ::set-output name=ZENOH_VERSION::"${ZENOH_VERSION}"
           if [ -n "${GIT_TAG}" ]; then
